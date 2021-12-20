@@ -14,6 +14,13 @@ import HomeSlider from '../../Components/HomeSlider';
 
 export default function Home({}) {
 
+    const filterdata=[
+        {name: "Level"},
+        {name: "Rating"},
+        {name: "For sale"},
+        {name: "Score"},
+    ]
+    
     return (
         <div className="main-wrapper">
             <section className="home-start-teaser-sec">
@@ -34,7 +41,7 @@ export default function Home({}) {
                                     <span>9,999 Players</span>
                                 </div>
                                 <SearchBox placeholder="Find the Game or Character that interests you"/>
-                                <Filter />
+                                <Filter filterlist={filterdata}/>
                             </div>
                             <PlayerList />
                             <Pagination />

@@ -5,15 +5,21 @@ import FilterIcon from '../../assets/images/filtericon.png';
 import Formcheckbox from '../../Components/Formcheckbox';
 import Button from '../../Components/Button';
 
-export default function Filter ({placeholder}) {
+export default function Filter ({filterlist}) {
   const [isActive, setActive] = useState(false);
   const toggleClass = () => {
     setActive(!isActive);
   };
 
-
-  return (
-    
+  const filteritem = filterlist.map(filter => {
+    return (
+              <li>
+                  <Formcheckbox inputType="checkbox" title={filter.name} id={filter.name}/>
+                  <span className="filter-no">{filter.data}</span>
+              </li>
+          );
+        });
+        return (
     <div className="filter-box-block">
         <div className={isActive ? 'filter-box show-filter': 'filter-box'} onClick={toggleClass}>
           <Link to="#0">
@@ -23,21 +29,7 @@ export default function Filter ({placeholder}) {
           </Link>
           <div className="filter-dropdown">
               <ul>
-                <li>
-                    <Formcheckbox inputType="checkbox" title="Level" id="level"/>
-                </li>
-                <li>
-                    <Formcheckbox inputType="checkbox" title="Rating" id="rating"/>
-                </li>
-                <li>
-                    <Formcheckbox inputType="checkbox" title="For sale" id="forsale"/>
-                </li>
-                <li>
-                    <Formcheckbox inputType="checkbox" title="Score" id="score"/>
-                </li>
-                <li>
-                    <Formcheckbox inputType="checkbox" title="By Price" id="score"/>
-                </li>
+              {filteritem}
               </ul>
               <div className="filter-actions">
                   <Button title="Reset" btn="btn btn-outline-primary"/>

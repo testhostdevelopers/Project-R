@@ -10,7 +10,7 @@
     }
     .filter-dropdown {
         background-color: var(--bggraylightblack);
-        padding: 32px 20px;
+        padding: 20px;
         width: 322px;
         position: absolute;
         border-radius: 16px;
@@ -29,20 +29,47 @@
             left: 0;
             padding: 15px;
         }
-        
         > ul{
             > li{
                 padding-bottom: 20px;
                 border-bottom: 1px solid #34373C;
                 margin-bottom: 15px;
-                @media screen and (max-width: $tablet){
-                    padding-bottom: 12px;
-                    margin-bottom: 10px;
+                padding-right: 40px;
+                position: relative;
+                @media screen and (max-width: $bigtablet){
+                    padding-bottom: 14px;
+                    margin-bottom: 12px;  
                 }
                 &:last-child{
                     border-bottom: 0;
                     padding-bottom: 0;
                     margin-bottom: 0;
+                }
+                > .filter-no{
+                    position: absolute;
+                    right: 0;
+                    top: 9px;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 100%;
+                    color: var(--white);
+                    @media screen and (max-width: $mobile){
+                        font-size: 12px;
+                    }
+                }
+                .formField {
+                    margin-bottom: 0;
+                }
+                label{
+                    color: var(--white);
+                    min-height: 32px;
+                    display: flex;
+                    align-items: center;
+                    @media screen and (max-width: $bigtablet){
+                        font-size: 12px;    
+                    }
                 }
             }
         }

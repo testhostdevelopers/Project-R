@@ -9,7 +9,8 @@
             + label{
                 &:before{
                     background-image: url(img/check-tick.png);
-                    border-color: var(--blue);
+                    background-color: var(--yellow);
+                    border-color: var(--yellow);
                     transition: all 0.5s ease;
              }  
             }
@@ -33,10 +34,10 @@
             height: 32px;
             width: 32px;
             border-radius: 100%;
-            border: 1px solid var(--blue);
+            border: 1px solid #606060;
             background-repeat: no-repeat;
             background-position: center center;
-            background-color: var(--yellow);
+            background-color: transparent;
         }
         
     }

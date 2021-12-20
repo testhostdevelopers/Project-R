@@ -421,7 +421,7 @@
 	flex-wrap: wrap;
     .player-img {
         width: 47%;
-        margin-bottom: -53px;
+        text-align: center;
         @media screen and (max-width: $mobile){
             width: 100%;
             margin-bottom: auto;

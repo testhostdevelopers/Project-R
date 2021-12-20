@@ -1,6 +1,16 @@
 @import '../../responsive.scss';
 
 .shope-page{
+    .title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+        color: var(--white);
+        padding-top: 0;
+        @media screen and (max-width: $bigtablet){
+            font-size: 16px;    
+        }
+    }
     .three-col{
         display: flex;
         flex-wrap: wrap;
@@ -8,20 +18,52 @@
         > div{
             padding: 0 15px;
         }
-        .title {
-            font-weight: bold;
-            font-size: 20px;
-            line-height: 130%;
-            color: var(--white);
-            padding-top: 20px;
-        }
         .filter-col{
             width: 25%;
+            @media screen and (max-width: $tablet){
+                width: 35%;   
+            }
+            @media screen and (max-width: $mobile){
+                width: 100%;   
+            }
             .filter-box-block{
                 margin: 0;
+                @media screen and (max-width: $mobile){
+                    width: 100%; 
+                    ul{
+                        display: block;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: auto;
+                        scrollbar-width: none;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                        li{
+                            white-space: nowrap;
+                            display: inline-block;
+                            vertical-align: top;
+                            margin: 0 15px 0 0;
+                            border: none;
+                            padding-bottom:0;
+                            padding-right:0;
+                            .filter-no{
+                                display: none;
+                            }
+                        }  
+                    }
+                }
                 .filter-box{
                     > a{
                         display: none;
+                    }
+                    @media screen and (max-width: $mobile){
+                        .filter-actions{
+                            justify-content: center;
+                            > .button{
+                                margin:0 7px;
+                            }
+                        }
                     }
                 }
                 .filter-dropdown{
@@ -35,17 +77,277 @@
         }
         .featured-item {
             width: 50%;
+            @media screen and (max-width: $tablet){
+                width: 65%;   
+            }
+            @media screen and (max-width: $mobile){
+                width: 100%;   
+            }
+            &.player-mid-col{
+                .mid-box {
+                    min-height: 425px;
+                    @media screen and (max-width: $bigtablet){
+                        min-height: 385px;
+                    }
+                    @media screen and (max-width: $tablet){
+                        min-height: 370px;
+                    }
+                }
+            }
+            @media screen and (max-width: $bigtablet){
+                .player-type-box{
+                    .player-img {
+                        width: 42%;
+                        max-height: 355px;
+                    }
+                    .player-type{
+                        width: 58%;
+                    }
+                }
+            }
+            @media screen and (max-width: $tablet){
+                .player-type-box{
+                    .player-img {
+                        max-height: 305px;
+                    }
+                }
+            }
+            @media screen and (max-width: $mobile){
+                .player-type-box{
+                    .player-img {
+                        width: 100%;
+                        max-height:unset;
+                        margin-bottom: 15px;
+                    }
+                    .player-type{
+                        width: 100%;
+                    }
+                }
+            }
             .player-type{
                 .dark-box {
+                    margin-top: 35px;
                     padding: 0;
                     background: transparent;
+                    @media screen and (max-width: $tablet){
+                        margin-top: 25px;
+                    }
+                }
+                h2{
+                    color: var(--white);
+                    display: inline-block;
+                    @media screen and (max-width: $bigtablet){
+                        font-size: 24px;
+                        margin-bottom: 15px;
+                    }
+                    @media screen and (max-width: $tablet){
+                        font-size: 20px;  
+                        margin-bottom: 12px;
+                    }
+                    img{
+                        margin: 0px 0 0 7px;
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                h6{
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 100%;
+                    color: #606060;
+                    @media screen and (max-width: $bigtablet){
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 160%;
+                    color: var(--white);
+                    @media screen and (max-width: $bigtablet){
+                        font-size: 11px;
+                        line-height: 150%;
+                    }
+                }
+                .action{
+                    margin-top: 25px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    .coin-value {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 100%;
+                        color: var(--yellow);
+                        @media screen and (max-width: $tablet){
+                            font-size: 14px;
+                        }
+                        img {
+                            margin-right: 6px;
+                        }
+                    }
+                    .btn-with-img {
+                        background: var(--yellow);
+                        font-size: 14px;
+                        line-height: 100%;
+                        color: #171717;
+                        margin-left: 12%;
+                        padding: 14px 27px;
+                        cursor: pointer;
+                        @media screen and (max-width: $tablet){
+                            margin-left: 2%;
+                            padding: 14px 15px;
+                        }
+                        @media screen and (max-width: $mobile){
+                            margin-left: 1%;
+                            padding: 8px 10px;
+                            font-size: 12px;
+                        }
+                        > span {
+                            line-height: 0;
+                            margin-right: 8px;
+                        }
+                    }
                 }
             }
         }
         .popular-items{
             width: 25%;
+            @media screen and (max-width: $tablet){
+                width: 100%;
+                margin-top: 30px;
+            }
+            @media screen and (max-width: $mobile){
+                margin-top: 15px;
+           }
             .team-mates{
                 margin-top: 0;
+                margin-bottom: 0;
+                @media screen and (max-width: $tablet){
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                     > ul{
+                         width: 48.5%;
+                     }
+                }
+                @media screen and (max-width: $mobile){
+                     > ul{
+                         width: 100%;
+                     }
+                }
+            }
+            .characters-list{
+                margin-bottom: 16px;
+            }
+            .Weapons-list{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.characters-section{
+    padding-bottom: 50px;
+    @media screen and (max-width: $tablet){
+        padding-top: 0px;
+    }
+    @media screen and (max-width: $mobile){
+        padding-bottom: 25px;
+    }
+    .title{
+        margin-bottom: 30px;
+        @media screen and (max-width: $bigtablet){
+            margin-bottom: 15px;
+        }
+    }
+    .four-col{
+        margin-top: 40px;
+        &:first-child{
+            margin-top: 0;
+        }
+        @media screen and (max-width: $mobile){
+            margin-top: 15px;
+       }
+        .Weapons-list,
+        .characters-list {
+            margin: 0 -12px;
+            display: flex;
+            flex-wrap: wrap;
+            .weapon_item,
+            .player_item{
+                padding: 0 12px;
+                width: 25%;
+                margin-bottom: 20px;
+                @media screen and (max-width: $tablet){
+                    width: 50%;
+                }
+                @media screen and (max-width: $mobile){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+.Transaction-popup{
+    p{
+        color: var(--white);
+        font-size: 16px;
+        line-height: 100%;
+        text-align: center;
+    }
+    h5{
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+        color: var(--white);
+    }
+    .wallet-connect{
+        margin-bottom: 30px;
+    }
+    .action-btn{
+        margin-top: 35px;
+        button{
+            width: 100%;
+        }
+    }
+    .wallet-action{
+        padding-left: 38px;
+        display: flex;
+        align-items: center;
+        > span{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            display: flex;
+            align-items: center;
+            color: #606060;
+            margin-right: 35px;
+            cursor: pointer;
+            img{
+                margin-right: 9px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            &:hover{
+                color: var(--white);
+                > img{
+                    filter: invert(1);
+                }
             }
         }
     }

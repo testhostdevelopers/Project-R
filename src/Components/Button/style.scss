@@ -1,3 +1,4 @@
+@import '../../responsive.scss';
 .button{
     position: relative;
     &:last-child{
@@ -15,10 +16,13 @@
         overflow: hidden;
         position: relative;
         border: 1px solid transparent;
-
+        @media screen and (max-width: $bigtablet){
+          padding: 12px 25px;
+        }
         &:hover{
           border-color: var(--yellow);
           background-color: transparent;
+          color: var(--yellow);
         }
         &.btn-outline-primary{
           background-color: transparent;

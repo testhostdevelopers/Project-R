@@ -1,0 +1,113 @@
+@import '../../responsive.scss';
+
+.modal-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    &.show-modal{
+        opacity: 1;
+        visibility: visible;
+        z-index:99;
+        pointer-events: auto;
+        transition: all 0.5s ease;
+    }
+    .close{
+        position: sticky;
+        top: 0;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        display: block;
+        float: right;
+        margin-right:0;
+        background: var(--bggraylightblack);
+        margin-top: 8px;
+        &:hover{
+            transform: rotate(-90deg);
+            transition: all 0.5s ease;
+        }
+    }
+    h3{
+        clear: both;
+        width: 100%;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 30px;
+        color: #242424;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(112,112,112,0.3);
+        margin-bottom: 30px;
+        &:empty{
+            display: none;
+        }
+    }
+    p{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 140%;
+        color: var(--white);
+        &.text-center{
+            text-align: center;
+        }
+        &.text-left{
+            text-align: left;
+        }
+        &.text-right{
+            text-align: right;
+        }
+
+    }
+    .modal-main{
+        position: relative;
+        max-width: 586px;
+        min-width: 530px;
+        max-height: 90vh;
+        min-height: 45px;
+        border-radius: 4px;
+        background: var(--bggraylightblack);
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5);
+        overflow: auto; 
+        overflow-x: hidden;
+        padding: 35px;
+    }
+    .active-button {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        &.center{
+            justify-content: center;
+        }
+        &.left{
+            justify-content: flex-start;
+        }
+        &.right{
+            justify-content: flex-end;
+        }
+        .button{
+            margin:0 10px;
+            &:first-child{
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            button{
+                font-size: 16px;
+                padding: 6px 30px;
+            }
+        }
+    }
+}

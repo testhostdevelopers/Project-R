@@ -45,6 +45,12 @@ export default function PlayerMidBar({}) {
         { img: REDSA,  name:"REDSA", des:"Japanese native, Yoru, rips holes straight through reality to infiltrate enemy lines unseen. Using deception and aggression in equal measure, he gets the drop on each target before they know where to look.",coinimg:eth,  coin:"0,067 ETH"  },
         { img: REBEL,  name:"REBEL", des:"Japanese native, Yoru, rips holes straight through reality to infiltrate enemy lines unseen. Using deception and aggression in equal measure, he gets the drop on each target before they know where to look.",coinimg:eth,  coin:"0,067 ETH"  },
     ]
+    const filterdata=[
+        {name: "Level"},
+        {name: "Rating"},
+        {name: "For sale"},
+        {name: "Score"},
+    ]
     
 
 
@@ -52,7 +58,7 @@ export default function PlayerMidBar({}) {
         <div className="player-mid-col">
             <div className='search-bar'>
                 <SearchBox setSearchValue={(value) => setSearchValue(value)} placeholder="Find the Game or Character that interests you"/>
-                <Filter />
+                <Filter filterlist={filterdata}/>
             </div>
 { searchValue ?
  

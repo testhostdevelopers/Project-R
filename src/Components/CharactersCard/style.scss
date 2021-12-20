@@ -1,0 +1,111 @@
+@import '../../responsive.scss';
+
+
+.characters-list {
+    .player_item {
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .Players-box {
+        padding: 13px 10px;
+        position: relative;
+        background: var(--bggraylightblack);
+        border-radius: 15px;
+        flex-wrap: wrap;
+        display: flex;
+        .player-img {
+            width: 45%;
+            display: block;
+            margin-bottom: -20px;
+            max-height: 185px;
+            text-align: center;
+        }
+        .Player-info {
+            width: 55%;
+            padding-left: 8%;
+            padding-top: 4px;
+            @media screen and (max-width: $bigtablet){
+                padding-left: 0;
+                padding-top: 0;
+            }
+            h4{
+                font-weight: 900;
+                font-size: 20px;
+                line-height: 130%;
+                color: var(--white);
+                text-transform: uppercase;
+                margin-bottom: 12px;
+                @media screen and (max-width: $bigtablet){
+                    font-size: 16px;
+                }
+            }
+            .p-description{
+                margin-bottom: 12px;
+                display: block;
+                label{
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 100%;
+                    text-transform: capitalize;
+                    color: #606060;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 130%;
+                    color: var(--white);
+                    @media screen and (max-width: $bigtablet){
+                        font-size: 11px;
+                    }
+                }
+            }
+            .pp-price{
+                > span{
+                    display: flex;
+                    font-size: 12px;
+                    line-height: 100%;
+                    color: var(--yellow);
+                    align-items: center;
+                    font-weight: 600;
+                    margin-bottom: 19px;
+                    img{
+                        margin: 0 5px 0 0;
+                    }
+                }
+                .btn-with-img{
+                    display: flex;
+                    width: 98px;
+                    height: 32px;
+                    background:var(--yellow);
+                    border-radius: 50px;
+                    font-size: 12px;
+                    color:#171717;
+                    padding: 8px;
+                    &:hover{
+                        opacity: 0.75;
+                    }
+                }
+            }
+        }
+        .win-ration{
+            label{
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 100%;
+                color: #606060;
+                margin-bottom: 10px;
+                display: block;
+            }
+            p{
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 130%;
+                color: var(--yellow);
+            }
+        }
+    }
+    
+}
