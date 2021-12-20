@@ -1,0 +1,82 @@
+@import '../../responsive.scss';
+
+.open-games-box{
+    background: #202020;
+    border-radius: 16px;
+    position: relative;
+    .open-games-play-img{
+        position: relative;
+        overflow: hidden;
+        padding-top: 74.2%;
+
+        > img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+    .play-game-btn {
+        background: rgba(23, 23, 23, 0.8);
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        backdrop-filter: none;
+        @media screen and (max-width: $tablet){
+            font-size: 12px;
+        }
+        > span{
+            background-color: var(--orange);
+            width: 33px;
+            height: 33px;
+            line-height: 36px;
+            @media screen and (max-width: $tablet){
+            width: 27px;
+            height: 27px;
+            line-height: 31px;
+            }
+        }
+    }
+
+    .open-games-play-info{
+        padding: 24px 20px;
+        @media screen and (max-width: $tablet){
+            padding: 20px 15px;
+        }
+        .open-games-play-info-btns {
+            margin-bottom: 16px;
+            > a{
+                margin-right: 8px;
+                @media screen and (max-width: $tablet){
+                    margin-top: 8px;
+                    margin-right: 3px;
+                }
+            }
+        }
+        .relam-box {
+            > ul{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .relam-box-info{
+            > table{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.open-games-slider-box{
+    position: relative;
+}
+

@@ -1,0 +1,166 @@
+@import '../../responsive.scss';
+.all-player-list-block{
+    padding-top: 40px;
+    @media screen and (max-width: $mobile){
+        padding-top: 20px;
+    }
+    .player-list-head{
+        display: flex;
+        padding: 0 14px;
+        padding-bottom: 32px;
+        > li {
+            p{
+                margin-bottom: 0;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 100%;
+                color: #FFFFFF;
+                opacity: 0.6;
+                
+            }
+        }
+        @media screen and (max-width: $mobile){
+            display: none;
+        }
+    }
+
+    .player-list-action{
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: $mobile){
+            width: 100%;
+            justify-content: space-between;
+        }
+        > a{
+            margin-right: 10px;
+            &:last-child{
+                margin-right: 0;
+            }
+            &.add-fav-btn{
+                img{
+                    filter: brightness(0) invert(1);
+                    transition: all 0.5s ease 0s; 
+                }
+                &.added-fav{
+                    img{
+                        filter: none;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .player-overal-rating-box {
+        margin-right: 15px;
+        @media screen and (max-width: $mobile){
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            margin: 0;
+        }
+    }
+    
+    .player-data-list{
+        background-color: var(--bggraylightblack);
+        padding: 12px;
+        border-radius: 16px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media screen and (max-width: $mobile){
+            position: relative;
+            padding-left: 100px;
+            padding-bottom: 40px;
+        }
+        > li{
+            > p {
+                font-size: 14px;
+                font-weight: bold;
+                @media screen and (max-width: $tablet){
+                    font-size: 12px;
+                }
+            }
+        }
+        .player-lavel-box-img{
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            position: relative;
+            @media screen and (max-width: $tablet){
+                width: 60px;
+                height: 60px;
+            }
+            @media screen and (max-width: $tablet){
+                width: 80px;
+                height: 80px;
+            }
+            .level-label-text{
+                background: linear-gradient(87.62deg, #3379E0 5.44%, #75ACFF 98.73%);
+                border-radius: 0px 0px 12px 12px;
+                font-style: italic;
+                font-weight: 900;
+                font-size: 10px;
+                line-height: 12px;
+                text-align: center;
+                letter-spacing: -0.05em;
+                color: #FFFFFF;    
+                display: block;    
+                padding: 5px;    
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+
+        .player-rating-progress-block{
+            display: flex;
+            align-items: center;
+            .rating-progress{
+                background: #606060;
+                border-radius: 50px;
+                height: 7px;
+                display: block;
+                position: relative;
+                width: 100%;
+                max-width: 70px;
+                min-width: 70px;
+                overflow: hidden;
+                @media screen and (max-width: $tablet){    
+                    max-width: 50px;
+                    min-width: 50px;
+                }
+                @media screen and (max-width: $mobile){    
+                    max-width: calc(100% - 45px);
+                    min-width: 1px;
+                }
+                > span{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    background-color: #29D53A;
+                }
+            }
+            > span{
+                font-size: 14px;
+                color: #FFFFFF;
+                font-weight: bold;
+                padding-left: 8px;
+                @media screen and (max-width: $tablet){    
+                    font-size: 12px;
+                }
+                @media screen and (max-width: $tablet){    
+                    width: 45px;
+                }
+            }
+        }
+
+    }
+}

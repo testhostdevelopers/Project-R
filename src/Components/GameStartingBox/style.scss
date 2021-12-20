@@ -1,0 +1,115 @@
+@import '../../responsive.scss';
+
+.game-starting-box {
+    width: 34%;
+    padding-left: 25px;
+    @media screen and (max-width: $mobile){
+        width: 100%;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .game-starting-box-inner{
+        position: relative;
+        .game-starting-box-img{
+            position: relative;
+            overflow: hidden;
+            padding-top: 88.3%;
+            border-radius: 20px;
+            > img{
+                position: absolute;
+                top: 0%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top center;
+            }
+        }
+
+        .game-starting-box-info{
+            position: absolute;
+            text-align: center;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0 30px 40px 30px;
+            @media screen and (max-width: $tablet){
+                padding: 0 15px 20px 15px;
+            }
+            h2{
+                font-weight: bold;
+                font-size: 32px;
+                color: #FFFFFF;                
+                margin-bottom: 48px;
+                @media screen and (max-width: $tablet){
+                    font-size: 22px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.countdown-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li{
+        font-size: 16px;
+        color: #FFFFFF;
+        position: relative;
+        min-width: 60px;
+        @media screen and (max-width: $tablet){
+            font-size: 12px;
+        }
+        @media screen and (max-width: $smtablet){
+            min-width: 1px;
+        }
+        &:last-child{
+            > span{
+                &::before{
+                    display: none;
+                }    
+            }
+        }
+        > span{
+            width: 64px;
+            height: 64px;
+            background: #202020;
+            border-radius: 50px;
+            color: #fff;
+            color: #FFF5F5;
+            line-height: 64px;
+            display: block;
+            font-size: 32px;
+            margin-bottom: 15px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            @media screen and (max-width: $tablet){
+                width: 44px;
+                height: 44px;
+                line-height: 44px;
+                font-size: 18px;
+            }
+            &::before{
+                content: ":";
+                position: absolute;
+                color: #fff;
+                top: 50%;
+                transform: translateY(-50%);
+                line-height: normal;
+                right: -26px;
+                font-size: 26px;
+                @media screen and (max-width: $tablet){
+                    right: -10px;
+                }
+                @media screen and (max-width: $smtablet){
+                    display: none;
+                }
+            }
+        }
+    }
+}

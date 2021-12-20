@@ -1,0 +1,130 @@
+@import '../../responsive.scss';
+
+.home-slider-sec{
+    position: relative;
+    overflow: hidden;
+    .home-slider {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        @media screen and (max-width: $tablet){
+            max-width: 80%;
+        }
+        @media screen and (max-width: $smtablet){
+            max-width: 75%;
+        }
+        @media screen and (max-width: $mobile){
+            max-width: 95%;
+        }
+        .owl-stage-outer{
+            overflow: visible;
+            .owl-item.active.center{
+                .m-slide-block{
+                    transform: scale(1);
+                }    
+            }
+            .m-slide-block{
+                transition: all 0.5s ease 0s;
+                transform: scale(0.94);
+                border-radius: 16px;
+                .m-slider-img{
+                    position: relative;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    line-height: 0;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background: linear-gradient(180deg, rgba(56, 56, 56, 0.22) 0%, rgba(3, 2, 2, 0.87) 114.83%);
+                        border-radius: 16px;
+                    }
+                }
+                .m-slider-info{
+                    text-align: left;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    padding: 0 40px 20px 40px;
+                    @media screen and (max-width: $smtablet){
+                        padding: 15px;
+                    }
+                    > h3{
+                        font-weight: bold;
+                        font-size: 30px;
+                        line-height: 130%;
+                        color: #FFFFFF;           
+                        max-width: 283px; 
+                        @media screen and (max-width: $smtablet){
+                            font-size: 24px;
+                            margin: 0;
+                        }
+                        @media screen and (max-width: $mobile){
+                            font-size: 14px;
+                            margin: 0;
+                            max-width: 40%;
+                        }
+                    }
+                    .m-slider-btn{
+                        background-color: #303030;
+                        border-radius: 50px;
+                        padding: 4px;
+                        display: flex;
+                        align-items: center;
+                        > span{    
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 100%;
+                            text-transform: capitalize;
+                            color: #FFFFFF;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            @media screen and (max-width: $mobile){
+                                padding-left: 12px;
+                                padding-right: 12px;
+                                font-size: 12px;
+                            }
+                        }
+                        > a{
+                            background-color: var(--yellow);
+                            color: #000;
+                            border: 1px solid transparent;
+                            @media screen and (max-width: $mobile){
+                                padding-left: 9px;
+                                padding-right: 15px;
+                                font-size: 12px;
+                            }
+                            img{
+                                transition: all 0.5s ease 0s;
+                            }
+                            &:hover{
+                                background-color: transparent;
+                                border-color: var(--yellow);
+                                color: var(--yellow);
+                                img{
+                                    filter: brightness(0) invert(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .owl-nav{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        left: -60px;
+        right: -60px;
+    }
+}

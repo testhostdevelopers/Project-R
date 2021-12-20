@@ -1,0 +1,85 @@
+@import '../../responsive.scss';
+
+.coin-box {
+    padding: 0;
+    margin: 0;
+	@media screen and (max-width: $smtablet) {
+		margin: 0 0 20px 0;
+		justify-content: center;
+		display: flex;
+		width: 100%;
+	}
+	@media screen and (max-width: $mobile) {
+		flex-wrap: wrap;
+	}
+	li {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		background-color: transparent;
+		margin-right: 14px;
+		border-radius: 50px;
+		border: 1px solid #E7E7E7;
+		width: 100%;
+		padding: 9px 9px;
+		max-width: 161px;
+		@media screen and (max-width: $mobile) {
+			margin: 5px 2px;
+			max-width: 48.9%;
+		}
+		.logo_name {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 95px;
+			justify-content: flex-start;
+			padding: 0;
+			@media screen and (max-width: $mobile) {
+				width: 80px;
+			}
+			img {
+				width: 20px;
+				height: 20px;
+				margin: 0;
+			}
+			> p {
+				font-weight: 600;
+				margin-left: 5px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				width: 67px;
+				@media screen and (max-width: $mobile) {
+					width: 55px;
+					font-size: 12px;
+				}
+			}
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+		.price{
+			width: 46px;
+			display: block;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			text-align: right;
+			@media screen and (max-width: $mobile) {
+				width: 41px;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+body{
+    &.darkmode{
+		.coin-box {
+			li {
+				background-color: transparent;
+			}
+		}
+    }
+}

@@ -1,0 +1,186 @@
+@import '../../../style.scss';
+
+.twoColsField{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .formField{
+        width: 47%;
+        .formField{
+            width: 100%;
+        }
+    }
+}
+.threeColsField{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .formField{
+        width: 31%;
+    }
+}
+.actionField{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    &.right{
+        justify-content: flex-end;
+    }
+    &.center{
+        justify-content: center;
+    }
+    &.left{
+        justify-content: flex-start;
+    }
+    .formField{
+        margin-bottom: 0;
+    }
+ 
+}
+.errorBox{
+    color: red;
+}
+.formField{
+    position: relative;
+    margin-bottom: 15px;
+    &.active{
+        >label{
+            color: var(--blue);
+        }
+    }
+    .dropback{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    > label{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        color: #67757c;
+        min-height: 20px;
+        display: block;
+        @media (max-width: $NormalScreen) {
+            font-size: 14px !important;
+        }
+    }
+    > label:empty{
+        display: none;
+    }
+    > label{
+        > div:empty{
+            display: none;
+        }
+    }
+
+    > input{
+        width: 100%;
+        height: 45px;
+        background: transparent;
+        border-width: 0 0 1px 0;
+        border-bottom: 1px solid rgba(36,36,36,0.4);
+        padding: 0 5px;
+        font-family: "Merriweather Sans";
+        font-weight: 300;
+        font-size: 16px;
+        color: var(--text-black);
+        @media (max-width: $NormalScreen) {
+            font-size: 14px;
+        }
+        &:active,
+        &:focus{           
+            border-bottom-color: #000;
+        }
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"]{
+        background-color: var(--blue);
+        width: auto;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 100%;
+        text-align: center;
+        color: #fff;
+        padding: 12px 25px;
+        height: auto;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            background-color: #4264B9;
+        }
+    }
+    input[type="reset"]{
+        background-color: transparent;
+        color: #d9d9d9;
+        &:hover{
+            background-color: transparent;
+            color: #333;
+        }
+    }
+}
+form > div:nth-last-child(2) .dropdown .dropdownBody {
+    top: auto;
+    bottom: 0;
+}
+form > div:nth-last-child(2) .dropdown .dropdownBody.open {
+	bottom: 100%;
+}
+.formField > label > .feildRequired {
+    display: flex;
+    align-items: flex-start;
+}
+.formField > label > .feildRequired > span {
+    margin-top: 0 !important;
+    margin-left: 3px;
+}
+
+.formField.WhatsappformField{
+    position: relative;
+    .formField {
+        label{
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            &::after{
+                content: "";
+                background-image: url('../../../assets/images/whatsapp.png');
+                display: block;
+                width: 18px;
+                height: 18px;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                right: -28px;
+                top: 2px;
+            }
+        }
+    }
+    .CopyContactCheckbox{
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        .formField{
+            margin-bottom: 0;
+            label{
+                font-size: 10px;
+                &::after{
+                    display: none;
+                }
+            }       
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.checkbox{
+    position: relative;
+    input[type="checkbox"]{
+        position:absolute;
+        opacity: 0;
+        margin: 0;
+        z-index: -1;
+        &:checked{
+            + label{
+                &:before{
+                    background-image: url(img/check-tick.png);
+                    border-color: var(--blue);
+                    transition: all 0.5s ease;
+             }  
+            }
+        }
+    }
+    > label{
+        position: relative;
+        cursor: pointer;
+        padding-left: 45px;
+        color: var(--white);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 32px;
+        display: inline-block;
+        &:before{
+            transition: all 0.5s ease;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 32px;
+            width: 32px;
+            border-radius: 100%;
+            border: 1px solid var(--blue);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: var(--yellow);
+        }
+        
+    }
+    
+}

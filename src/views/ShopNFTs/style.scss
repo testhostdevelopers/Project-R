@@ -1,0 +1,52 @@
+@import '../../responsive.scss';
+
+.shope-page{
+    .three-col{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        > div{
+            padding: 0 15px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 130%;
+            color: var(--white);
+            padding-top: 20px;
+        }
+        .filter-col{
+            width: 25%;
+            .filter-box-block{
+                margin: 0;
+                .filter-box{
+                    > a{
+                        display: none;
+                    }
+                }
+                .filter-dropdown{
+                    position: relative;
+                    top: auto;
+                    width: 100%;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+        .featured-item {
+            width: 50%;
+            .player-type{
+                .dark-box {
+                    padding: 0;
+                    background: transparent;
+                }
+            }
+        }
+        .popular-items{
+            width: 25%;
+            .team-mates{
+                margin-top: 0;
+            }
+        }
+    }
+}

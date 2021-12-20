@@ -1,0 +1,60 @@
+@import '../../responsive.scss';
+
+
+.player-list {
+    .player_item {
+        margin-bottom: 20px;
+    }
+    .Players-box {
+        padding: 10px;
+        position: relative;
+        background: var(--bggraylightblack);
+        border-radius: 15px;
+        flex-wrap: wrap;
+        display: flex;
+        .player-img {
+            width: 41%;
+            display: block;
+            margin-bottom: -20px;
+        }
+        .Player-info {
+            width: 59%;
+            padding-left: 36px;
+            padding-top: 36px;
+            @media screen and (max-width: $bigtablet){
+                padding-left: 25px;
+                padding-top: 20px;
+            }
+            h4{
+                font-weight: 900;
+                font-size: 40px;
+                line-height: 130%;
+                color: var(--white);
+                text-transform: uppercase;
+                margin-bottom: 18px;
+                @media screen and (max-width: $bigtablet){
+                    font-size: 28px;
+                }
+            }
+        }
+        .win-ration{
+            label{
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 100%;
+                color: #606060;
+                margin-bottom: 10px;
+                display: block;
+            }
+            p{
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 130%;
+                color: var(--yellow);
+            }
+        }
+    }
+    &:last-child{
+        margin-bottom: 0;
+    }
+}

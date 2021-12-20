@@ -1,0 +1,62 @@
+@import '../../responsive.scss';
+.pagination-box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    .main-pagination-inner{
+        padding: 4px;
+        background: #202020;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        margin: 0 16px;
+        @media screen and (max-width: $mobile){
+            margin: 0 5px;
+        }
+        > ul{
+            display: flex;
+            align-items: center;
+            li{
+                margin: 0 2px;
+                span,
+                a{
+                    min-width: 32px;
+                    color: #fff;
+                    display: inline-block;
+                    text-align: center;
+                    @media screen and (max-width: $mobile){
+                        font-size: 12px;
+                        min-width: 30px;
+                    }
+                }
+            }
+            &.pagination-count{
+                li {
+                    a{
+                        width: 32px;
+                        height: 32px;
+                        line-height: 32px;
+                        text-align: center;
+                        color: #ffff;
+                        display: block;
+                        border-radius: 100%;
+
+                        &.active,
+                        &:hover{
+                            background-color: var(--yellow);
+                            color: #202020;
+                        }
+                        @media screen and (max-width: $mobile){
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

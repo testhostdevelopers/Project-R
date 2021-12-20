@@ -1,0 +1,107 @@
+@import '../../responsive.scss';
+
+.watch-teaser-box{
+    width: 66%;
+    @media screen and (max-width: $mobile){
+        width: 100%;
+    }
+    .watch-teaser-box-inner{
+        position: relative;
+        .watch-teaser-box-img{
+            position: relative;
+            overflow: hidden;
+            padding-top: 42.9%;
+            border-radius: 5px;
+            > img{
+                position: absolute;
+                top: 0%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top center;
+            }
+        }
+        .watch-teaser-box-info {
+            position: absolute;
+            bottom: 0;
+            padding: 15px 28px;
+            right: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            @media screen and (max-width: $tablet){
+                padding: 10px 10px;
+            }
+            @media screen and (max-width: $mobile){
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .watch-teaser-box-logo{
+                width: 100%;
+                max-width: 300px;
+                @media screen and (max-width: $smtablet){
+                    max-width: 120px
+                }
+                @media screen and (max-width: $mobile){
+                    max-width: 120px;
+                }
+                > img{
+                    width: 100%;
+                }
+            }
+            .watch-teaser-box-logo-info{
+                margin-left: 7%;
+                max-width: 230px;
+                @media screen and (max-width: $tablet){
+                    margin-left: 3%;
+                }
+                @media screen and (max-width: $mobile){
+                    padding-bottom: 10px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+        .watch-teaser-box-btn {
+            margin-left: 8%;
+            @media screen and (max-width: $tablet){
+                margin-left: 3%;
+            }
+        }
+    }
+}
+
+
+.play-teaser-btn{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    border-radius: 50px;
+    display: block;
+    padding: 6px;
+    padding-right: 20px;
+    white-space: nowrap;
+    font-size: 16px;
+    @media screen and (max-width: $smtablet){
+        font-size: 12px;
+        padding: 5px 12px 5px 6px;
+        > span{
+            width: 34px !important;
+            height: 34px !important;
+            line-height: 37px !important;
+        }
+    }
+    > span{
+        width: 44px;
+        height: 44px;
+        display: inline-block;
+        background-color: var(--yellow);
+        border-radius: 100%;
+        text-align: center;
+        line-height: 47px;
+        margin-right: 12px;
+    }
+}

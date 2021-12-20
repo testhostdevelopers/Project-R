@@ -1,0 +1,91 @@
+@import '../../responsive.scss';
+
+.filter-box{
+    position: relative;
+    &.show-filter{
+        .filter-dropdown{
+            opacity: 1;
+            visibility: visible;
+        }    
+    }
+    .filter-dropdown {
+        background-color: var(--bggraylightblack);
+        padding: 32px 20px;
+        width: 322px;
+        position: absolute;
+        border-radius: 16px;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5);
+        top: 140%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease 0s;
+        z-index: 9;
+        @media screen and (max-width: $tablet){
+            right: 0;
+            padding: 20px;
+        }
+        @media screen and (max-width: $mobile){
+            right: auto;
+            left: 0;
+            padding: 15px;
+        }
+        
+        > ul{
+            > li{
+                padding-bottom: 20px;
+                border-bottom: 1px solid #34373C;
+                margin-bottom: 15px;
+                @media screen and (max-width: $tablet){
+                    padding-bottom: 12px;
+                    margin-bottom: 10px;
+                }
+                &:last-child{
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    > a{
+        display: flex;
+        background: #242323;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+        color: #FFFFFF;
+        padding: 14px 15px;
+        align-items: center;
+        @media screen and (max-width: $tablet){
+            font-size: 14px;
+            padding: 12px 15px;
+        }
+        > span.filter-text{
+            padding: 0 16px;
+            color: #fff;
+            font-size: 16px;
+            @media screen and (max-width: $mobile){
+                font-size: 14px;
+            }
+        }
+        > span.filter-count{
+            background-color: var(--yellow);
+            color: #171717;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border-radius: 100%;
+            display: block;
+        }
+    }
+    .filter-actions {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 33px;
+        @media screen and (max-width: $tablet){
+            padding-top: 20px;
+        }
+    }
+}

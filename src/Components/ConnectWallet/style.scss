@@ -1,0 +1,72 @@
+@import '../../responsive.scss';
+
+.wallet_connected {
+    max-width: 170px;
+    min-width: 170px;
+    width: 100%;
+    text-align: center;
+    @media screen and (max-width: $mobile) {
+        max-width: 115px;
+        min-width: 160px;
+    }
+    p {
+        margin: 0;
+        font-weight: 600;
+        border: 1px solid var(--white);
+        border-radius: 55px;
+        padding: 12.5px;
+        position: relative;
+        text-indent: 20px;
+        font-size: 16px;
+        @media screen and (max-width: $smtablet){
+            padding: 10.5px;
+            font-size: 14px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            width: 15px;
+            height: 15px;
+            transform: translateY(-50%);
+            background-color: #00A478;            ;
+            border-radius: 50px;
+            // @media screen and (max-width: $mobile) {
+            //     left: 10px;
+            //     height: 8px;
+            //     width: 8px;
+            // }
+        }
+        // @media screen and (max-width: $tablet) {
+        //     border-radius: 12px;
+        //     padding: 10px 5px;
+        //     text-indent: 10px;
+        // }
+        // @media screen and (max-width: $mobile) {
+        //     font-size: 11px;
+        // }
+    }
+    .Wallet-Connect,
+    .Wallet-NotConnect{
+        display: none;
+    }
+    .Wallet-NotConnect{
+        p{
+            &::before {
+                background-color: #D8180C;
+            }
+        }
+    }
+    &.CWNameTrue{
+        .Wallet-Connect{
+            display: block;
+        }
+    }
+    &.CWNameFalse{
+        .Wallet-NotConnect{
+            display: block;
+        }
+    }
+    
+}
