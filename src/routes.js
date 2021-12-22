@@ -12,6 +12,7 @@ import {
 import Home from "./views/Home";
 import Players from "./views/Players";
 import ShopNFTs from "./views/ShopNFTs";
+import Play from "./views/Play";
 
 export default [
 	{
@@ -31,5 +32,11 @@ export default [
 		exact: true,
 		layout: DefaultLayout,
 		component: ShopNFTs
+	},
+	{
+		path: `/Play`,
+		exact: true,
+		layout: DefaultLayout,
+		component: Play
 	},
 ];
