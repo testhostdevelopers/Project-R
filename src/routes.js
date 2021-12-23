@@ -16,7 +16,7 @@ import Play from "./views/Play";
 
 export default [
 	{
-		path: `/Home`,
+		path: `/`,
 		exact: true,
 		layout: DefaultLayout,
 		component: Home
