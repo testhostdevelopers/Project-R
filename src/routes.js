@@ -20,7 +20,7 @@ import Watch from "./views/Watch";
 
 export default [
 	{
-		path: `/Home`,
+		path: `/`,
 		exact: true,
 		layout: DefaultLayout,
 		component: Home
