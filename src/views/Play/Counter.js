@@ -21,7 +21,8 @@ export default function Counter() {
                     <img src={countdownBG}/>
                 </div>
                 <div className='counter-time'>
-                    <Countdown toDate={new Date(2022, 5, 14)} />
+
+                    <Countdown toDate={new Date('2021-12-24')} />
                 </div>
             </div>
             <div className='game-action-button'>

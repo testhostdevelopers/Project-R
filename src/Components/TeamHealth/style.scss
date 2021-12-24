@@ -1,0 +1,124 @@
+@import '../../responsive.scss';
+
+.team-health-item {
+	background: var(--bggraylightblack);
+	border-radius: 16px;
+	padding: 20px;
+	margin-bottom: 25px;
+    .team-health-header{
+        margin-bottom: 18px;
+        h4{
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 130%;
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            @media screen and (max-width: $bigtablet){
+                font-size: 16px;
+            }
+            a{
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 100%;
+                text-transform: capitalize;
+                color: #606060;
+                &:hover{
+                    color: var(--yellow);
+                }
+            }
+        }
+    }
+    .player-involved{
+        display: flex;
+        flex-wrap: wrap;
+        > span{
+            width: 145px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            display: inline-flex;
+            border-right: 1px solid #262626;
+            @media screen and (max-width: $bigtablet){
+                width: 120px;
+            }
+            @media screen and (max-width: $tablet){
+                width: 90px;
+            }
+            > img{
+                width: 32px;
+                height: 32px;
+                border-radius: 50px;
+                object-fit: cover;
+                margin: 0 -5px;
+                @media screen and (max-width: $tablet){
+                    width: 28px;
+                    height: 28px;
+                }
+                &:nth-child(2){
+                    z-index: 1;
+                }
+            }
+            > img[src=""]{
+                display: none;
+            }
+            p{
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 100%;
+                text-transform: capitalize;
+                color: #FFFFFF;
+                width: 100%;
+                text-align: center;
+                margin-top: 15px;
+                @media screen and (max-width: $bigtablet){
+                    font-size: 12px;
+                }
+                @media screen and (max-width: $tablet){
+                    font-size: 10px;
+                }
+            }
+        }
+        > ul{
+            width: calc(100% - 145px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen and (max-width: $bigtablet){
+                width: calc(100% - 120px);
+            }
+            @media screen and (max-width: $tablet){
+                width: calc(100% - 90px);
+            }
+            li{
+                width: 33.33%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .icon-box{
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50px;
+                    object-fit: cover;
+                }
+                p{
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 100%;
+                    color: var(--white);
+                    margin-top: 25px;
+                    @media screen and (max-width: $bigtablet){
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

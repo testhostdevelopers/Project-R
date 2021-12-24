@@ -1,0 +1,148 @@
+@import '../../responsive.scss';
+
+.game-votes-item{
+    margin-bottom: 24px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.game-votes-box{
+    background: var(--bggraylightblack);
+    border-radius: 16px;
+    padding: 20px;
+    .game-votes-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+        @media screen and (max-width: $tablet){
+            margin-bottom: 15px;
+        }
+        h4{
+            font-size: 14px;
+            line-height: 100%;
+            text-transform: capitalize;
+            color: var(--white);
+            margin: 0;
+            @media screen and (max-width: $bigtablet){
+               width: 100%;
+               margin-bottom: 12px;
+            }
+        }
+        .team-time {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            @media screen and (max-width: $bigtablet){
+                width: 100%;
+            }
+        }
+        .radio-btn{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-right: 20px;
+            label{
+                font-size: 14px;
+                line-height: 100%;
+                padding-left: 25px;
+                line-height: 16px;
+                &:before {
+                    top:0;
+                    width: 16px;
+                    height: 16px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 8px;
+                }
+            }
+            input[type="radio"]:checked + label::before{
+                background-color: var(--yellow);
+                background-image: url('../../assets/images/check-tick.png');
+                box-shadow: none;
+            }
+        }
+        .formField {
+            margin-bottom: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-right: 15px;
+            &:last-child{
+                margin-right: 0;
+            }
+            .dropdown{
+                padding: 0;
+                .dropdownHeader {
+                    border-color: var(--yellow);
+                    color: var(--yellow);
+                    .icon{
+                        background-image: url('../../assets/images/yellow-arrow.png');
+                    }
+                }
+            }
+        }
+    }
+    .progress-info{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 32px;
+        li{
+            font-size: 12px;
+            line-height: 100%;
+            color: var(--white);
+            margin-right: 25px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            &:last-child{
+                margin-right:0;
+            }
+            .dot{
+                width: 12px;
+                height: 12px;
+                border-radius: 50px;
+                display: block;
+                margin-right: 12px;
+                &.blue {
+                    background: #017FDB;
+                }
+                &.red{
+                    background: #EB2644;
+                }
+            }
+        }
+    }
+    .player-graph{
+        display: block;
+        width: 100%;
+        .player-red-progress,
+        .player-blue-progress{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 32px;
+            background: #017FDB;
+            border-radius: 100px;
+            padding: 0 15px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 100%;
+            color: var(--white);
+            margin-bottom: 15px;
+            transition: all 0.5s ease;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            >span{
+                font-weight: bold;
+            }
+        }
+        .player-red-progress{
+            background: #EB2644;
+        }
+    }
+}

@@ -6,6 +6,9 @@
     .row{
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: $tablet){
+            justify-content: center;
+        }
         .footer-left-block{
             @media screen and (max-width: $mobile){
                 width: 100%;

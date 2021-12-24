@@ -1,5 +1,7 @@
 import React from "react";
 import './style.scss';
+import gameplay from '../../assets/images/Play-icon.png';
+
 
 export class Countdown extends React.Component {
 	constructor(props) {
@@ -21,7 +23,7 @@ export class Countdown extends React.Component {
 		const { now } = this.state;
 		const { toDate } = this.props;
 		const delta = toDate - now;
-
+		//console.log(toDate)
 		let countDownTime = {
 			years: Math.floor(delta / 1000 / 60 / 60 / 24 / 30 / 12),
 			months: Math.floor((delta / 1000 / 60 / 60 / 24 / 30) % 12),
@@ -32,9 +34,18 @@ export class Countdown extends React.Component {
 			milliseconds: delta,
 			asDays: Math.floor(delta / 1000 / 60 / 60 / 24)
 		};
+		console.log(`${countDownTime.hours}${countDownTime.minutes}${countDownTime.seconds}`);
 
 		return (
 			<>
+			{countDownTime.hours  <= 0 && countDownTime.minutes  <= 0 && countDownTime.seconds  <= 0 ?
+					<div className="play_game">
+						<span>
+							<img src={gameplay}/>
+							Play Game
+						</span>
+					</div>
+				:
 				<time
 					className="CountdownDisplay"
 					datetime={`P${countDownTime.asDays}DT${countDownTime.hours}H${countDownTime.minutes}M${countDownTime.seconds}S`}
@@ -62,6 +73,7 @@ export class Countdown extends React.Component {
 						<span className="label">seconds</span>
 					</div>
 				</time>
+				}
 			</>
 
 		)

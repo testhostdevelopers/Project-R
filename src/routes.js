@@ -13,6 +13,10 @@ import Home from "./views/Home";
 import Players from "./views/Players";
 import ShopNFTs from "./views/ShopNFTs";
 import Play from "./views/Play";
+import PlayCountdown from "./views/PlayCountdown";
+import GameFullscreen from "./views/GameFullscreen";
+import Watch from "./views/Watch";
+
 
 export default [
 	{
@@ -39,4 +43,21 @@ export default [
 		layout: DefaultLayout,
 		component: Play
 	},
+	{
+		path: `/PlayCountdown`,
+		exact: true,
+		component: PlayCountdown
+	},
+	{
+		path: `/GameFullscreen`,
+		exact: true,
+		component: GameFullscreen
+	},
+	{
+		path: `/Watch`,
+		exact: true,
+		layout: DefaultLayout,
+		component: Watch
+	},
+	
 ];
