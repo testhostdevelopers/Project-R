@@ -10,12 +10,12 @@ import './style.scss';
 
 export default function Menu() {
 	const [mainmenu, setMainMenu] = useState([
-		{ id: 1, name: "Home", to: '/Home', img: HomeIcon, active: false },
+		{ id: 1, name: "Home", to: '/', img: HomeIcon, active: false },
 		{ id: 2, name: "Players", to: '/Players', img: PlayersIcon, active: false },
 		{ id: 3, name: "Shop NFT", to: '/ShopNFTs', img: ShopnftIcon, active: false },
-		{ id: 4, name: "Play", to: '/Watch', img: PlaygameIcon, active: false },
-		{ id: 5, name: "Watch", to: '#0', img: WatchIcon, active: false },
-		{ id: 5, name: "Stats", to: '#0', img: StatsIcon, active: false },
+		{ id: 4, name: "Play", to: '/play', img: PlaygameIcon, active: false },
+		{ id: 5, name: "Watch", to: '/Watch', img: WatchIcon, active: false },
+		{ id: 5, name: "Stats", to: '/Stats', img: StatsIcon, active: false },
 	]);
 	const location = useLocation();
 

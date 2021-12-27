@@ -584,6 +584,9 @@
             margin-bottom: 15px;
         }
         .weapon-dropdown{
+            label{
+                display: none;
+            }
             .formField {
                 position: absolute;
                 top: 16px;

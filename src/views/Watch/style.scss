@@ -88,6 +88,55 @@
             }
             @media screen and (max-width: $mobile){
                 margin-top: 25px;
+                display: flex;
+                flex-wrap: wrap;
+                tbody{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    tr{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-bottom: 20px;
+                        background: var(--bggraylightblack);
+                        padding: 15px;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        td{    
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            position: relative;
+                            padding: 0 0 12px 110px;
+                            align-items: center;
+                            margin-bottom: 12px;
+                            font-size: 13px;
+                            font-weight: normal;
+                            border-bottom: 1px solid #2b2b2b;
+                            &::before{
+                                content: attr(datatitle);
+                                min-width: 100px;
+                                position: absolute;
+                                top: 30%;
+                                left: 0;
+                                transform: translateY(-50%);
+                            }
+                            &:last-child{
+                                margin-bottom: 0;
+                                justify-content: center;
+                                border-bottom: none;
+                                padding: 0;
+                                > span{
+                                    margin: 0 10px;
+                                }
+                                &::before{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             th,
             td{
@@ -113,6 +162,10 @@
                 &:first-child{
                     border-radius:15px 0 0 15px;
                     width: 30%;
+                    @media screen and (max-width: $mobile){
+                        width: 100%;
+                        border-radius: 0 0 0 0;
+                    }
                 }
                 &:last-child{
                     border-radius:0 15px 15px 0;
@@ -121,6 +174,10 @@
                     color: var(--white);
                     @media screen and (max-width: $bigtablet){
                         width: 28%;
+                    }
+                    @media screen and (max-width: $mobile){
+                        width: 100%;
+                        border-radius: 0 0 0 0;
                     }
                 }
             }

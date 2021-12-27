@@ -16,6 +16,12 @@ import Play from "./views/Play";
 import PlayCountdown from "./views/PlayCountdown";
 import GameFullscreen from "./views/GameFullscreen";
 import Watch from "./views/Watch";
+import WatchFullscreen from "./views/WatchFullscreen";
+import Stats from "./views/Stats";
+import StatsDetails from "./views/Stats/StatsDetails";
+import Profile from "./views/Profile";
+
+
 
 
 export default [
@@ -59,5 +65,31 @@ export default [
 		layout: DefaultLayout,
 		component: Watch
 	},
+	{
+		path: `/WatchFullscreen`,
+		exact: true,
+		component: WatchFullscreen
+	},
+	{
+		path: `/Stats`,
+		exact: true,
+		layout: DefaultLayout,
+		component: Stats
+	},
+	{
+		path: `/StatsDetails`,
+		exact: true,
+		layout: DefaultLayout,
+		component: StatsDetails
+	},
+	{
+		path: `/Profile`,
+		exact: true,
+		layout: DefaultLayout,
+		component: Profile
+	},
+
+	
+
 	
 ];

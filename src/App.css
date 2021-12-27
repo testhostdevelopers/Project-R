@@ -30,6 +30,50 @@
   color: #61dafb;
 }
 
+.page-title{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  color: var(--white);  
+}
+.title-with-seach {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+  margin-bottom: 32px;
+  width: 100%;
+}
+.title-with-seach h2{
+  margin-bottom: 0;
+}
+.title-with-seach .search-filter {
+	max-width: 660px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.title-with-seach  .searchbox-block{
+  max-width: 494px;
+  width: 100%;
+}
+.title-with-seach  .filter-box {
+	position: relative;
+	height: 100%;
+}
+.title-with-seach  .filter-box > a {
+  height: 100%;
+}
+
+
+
+
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

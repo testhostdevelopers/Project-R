@@ -1,0 +1,98 @@
+@import '../../responsive.scss';
+
+.players-page{
+    &.profile-page{
+        
+        .price{
+            h3{
+                font-size: 14px;
+                line-height: 100%;
+                text-transform: capitalize;
+                color: var(--white);
+            }
+            .price{
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 130%;
+                color: var(--yellow);
+            }
+        }
+
+        .player-mid-col{
+            width: 75%;
+            .top-player-wrap{
+                width: 66%;
+                margin-top: 24px;
+            }
+            .top-player {
+                margin-top: 0;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        .watch-teaser-box{
+            width: 100%;
+            margin-bottom: 25px;
+            .watch-teaser-box-btn{
+                margin-left: 18%;
+            }
+        }
+        .search-bar{
+            .search-wrap {
+                max-width: 640px;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .filter-box {
+                position: relative;
+                height: 100%;
+                > a {
+                    height: 100%;
+                }
+                .filter-dropdown{
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+
+    }
+    .round-title{
+        display: inline-flex;
+        flex-wrap: wrap;
+        background: var(--bggraylightblack);
+        border-radius: 50px;
+        padding: 6px 6px 6px 25px;
+        h2{
+            margin: 0;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 130%;
+            color: var(--white);
+            margin-right: 24px;
+            display: flex;
+            align-items: center;
+        }
+        span{
+            background: var(--yellow);
+            border-radius: 50px;
+            display:inline-block;
+            padding: 15px 20px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 100%;
+            color: #171717;
+        }
+    }
+}
+
+.Tournament {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+    .tour-right{
+        width: 32%;
+    }
+}

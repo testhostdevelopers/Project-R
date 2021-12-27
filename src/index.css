@@ -127,7 +127,7 @@ div input, div select, div textarea, div button{
 body h1, body h2, body h3, body h4, body h5, body h6{
 	font-family: 'Inter', sans-serif;
 	line-height:120%;
-	color:var(--text-color);
+	color:var(--white);
 	font-weight: bold;
 	margin:0 0 15px;
 }
@@ -475,6 +475,26 @@ section {
     width: auto;
 }
 
+.note {
+	position: relative;
+	padding: 40px 0 10px 0;
+}
+.note h6{
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 160%;
+	color: #FFFFFF;
+	margin-bottom: 5px;	
+}
+.note p{
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 160%;
+	color: #606060;
+}
 
 @media (max-width: 1200px){
 	.container {

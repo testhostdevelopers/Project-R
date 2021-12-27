@@ -5,6 +5,17 @@
 	border-radius: 16px;
 	padding: 20px;
 	margin-bottom: 25px;
+    @media screen and (max-width: $mobile){
+        padding: 15px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .team-health-box{
+            .dark-box{
+                padding: 11px 0;
+            }
+        }
+    }
     .team-health-header{
         margin-bottom: 18px;
         h4{
@@ -58,6 +69,10 @@
                     width: 28px;
                     height: 28px;
                 }
+                @media screen and (max-width: $mobile){
+                    width: 22px;
+                    height: 22px;
+                }
                 &:nth-child(2){
                     z-index: 1;
                 }
@@ -79,6 +94,9 @@
                 }
                 @media screen and (max-width: $tablet){
                     font-size: 10px;
+                }
+                @media screen and (max-width: $mobile){
+                    margin-top: 10px;
                 }
             }
         }
@@ -116,6 +134,9 @@
                     margin-top: 25px;
                     @media screen and (max-width: $bigtablet){
                         font-size: 10px;
+                    }
+                    @media screen and (max-width: $mobile){
+                        margin-top: 10px;
                     }
                 }
             }

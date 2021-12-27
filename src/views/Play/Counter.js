@@ -22,7 +22,7 @@ export default function Counter() {
                 </div>
                 <div className='counter-time'>
 
-                    <Countdown toDate={new Date('2021-12-24')} />
+                    <Countdown toDate={new Date('2021-12-31')} />
                 </div>
             </div>
             <div className='game-action-button'>
