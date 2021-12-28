@@ -11,7 +11,7 @@ export default function GamesDetails({ GamesData }) {
 		{ value: "Net Worth", label: "Net Worth" },
 		{ value: "Analytic", label: "Analytic" },
 	]
-	const Gamesvotes = GamesData.map(Games => {
+	const Gamesvotes = GamesData.map((Games,i) => {
 		return (
 
 			<li className="game-votes-item">
@@ -20,8 +20,8 @@ export default function GamesDetails({ GamesData }) {
 						<h4>{Games.title}</h4>
 						<div className="team-time">
 							<span className="radio-btn">
-								<FormRadio inputType="radio" name="team" title="All Team" id="team" />
-								<FormRadio inputType="radio" name="team" title="Show Time" id="time" />
+								<FormRadio inputType="radio" name="team" title="All Team" id={`Team${i}`} />
+								<FormRadio inputType="radio" name="team" title="Show Time" id={`Time${i}`} />
 							</span>
 							<span className="select-option">
 								<FormSelect options={WeaponsList} onClick={setWeapon} value={allWeapon} defaultValue="All Weapons" />

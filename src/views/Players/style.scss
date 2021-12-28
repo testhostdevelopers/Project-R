@@ -636,6 +636,11 @@
             .formField {
                 margin-bottom: 0;
             }
+            .formField {
+                label{
+                    display: none;
+                }
+            }
         }
     }
 

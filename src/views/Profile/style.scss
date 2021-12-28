@@ -20,9 +20,26 @@
 
         .player-mid-col{
             width: 75%;
+            @media screen and (max-width: $tablet){
+                max-width: 70%;
+                width: 100%;
+                .search-bar .searchbox-block {
+                    width: 100%;
+                }
+                .filter-box-block {
+                    margin: 20px auto 0 auto;
+                }
+            }
+            @media screen and (max-width: $tablet){
+                max-width: 100%;
+                width: 100%;
+            }
             .top-player-wrap{
                 width: 66%;
                 margin-top: 24px;
+                @media screen and (max-width: $smtablet){
+                    width: 100%;
+                }
             }
             .top-player {
                 margin-top: 0;
@@ -35,14 +52,24 @@
             margin-bottom: 25px;
             .watch-teaser-box-btn{
                 margin-left: 18%;
+                @media screen and (max-width: $tablet){
+                    margin-left: 5%;
+                }
             }
         }
         .search-bar{
             .search-wrap {
-                max-width: 640px;
+                max-width: 64%;
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
+                @media screen and (max-width: $bigtablet){
+                    max-width: 60%;
+                }
+                @media screen and (max-width: $smtablet){
+                    max-width: 100%;
+                    margin-top: 20px;
+                }
             }
             .filter-box {
                 position: relative;
@@ -73,6 +100,10 @@
             margin-right: 24px;
             display: flex;
             align-items: center;
+            @media screen and (max-width: $tablet){
+                font-size: 14px;
+                margin-right: 10px;
+            }
         }
         span{
             background: var(--yellow);
@@ -84,6 +115,10 @@
             font-size: 18px;
             line-height: 100%;
             color: #171717;
+            @media screen and (max-width: $tablet){
+                font-size: 14px;
+                padding: 10px 12px;
+            }
         }
     }
 }
@@ -94,5 +129,8 @@
     justify-content: space-between;
     .tour-right{
         width: 32%;
+        @media screen and (max-width: $smtablet){
+            width: 100%;
+        }
     }
 }

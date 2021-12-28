@@ -3,12 +3,16 @@ import './style.scss';
 import { Link } from "react-router-dom";
 
 export default function Achievement ({Achievementdata}) {
-    
-    
-    const AchievementList = Achievementdata.map(achive => {
+    const found = Achievementdata.findIndex(element => element.active === true);
+    const [activeAchive, setActiveAchive] = useState( found && found >= 0 && found);
+    const fnActiveAchive = (index) => {
+		setActiveAchive(index);
+	}
+	
+    const AchievementList = Achievementdata.map((achive,i) => {
 		return (
-			<li className="achive_item">
-				<div className="achive-box players-page">
+			<li className="achive_item" onClick={() => fnActiveAchive(i)}>
+				<div className={`achive-box players-page ${ activeAchive === i ? "current" : ""}`}>
 					<div className="achive-img">
 						<img src={achive.img}/>
 					</div>

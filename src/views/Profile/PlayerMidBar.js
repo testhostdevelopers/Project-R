@@ -66,13 +66,13 @@ export default function PlayerMidBar({}) {
         {name: "Score"},
     ]
     const Achievementresult=[
-        { img: Achievement1,  title:"Old Boy",progressno:"23",totalprogress:"50" },
-        { img: Achievement1,  title:"Old Boy",progressno:"23",totalprogress:"50" },
-        { img: Achievement3,  title:"Old Boy",progressno:"23",totalprogress:"50" },
-        { img: Achievement4,  title:"Old Boy",progressno:"23",totalprogress:"50" },
-        { img: Achievement5,  title:"Old Boy",progressno:"23",totalprogress:"50" },
-        { img: Achievement6,  title:"Old Boy",progressno:"23",totalprogress:"50" },
-        { img: Achievement1,  title:"Old Boy",progressno:"23",totalprogress:"50" },
+        { img: Achievement1,  title:"Old Boy",progressno:"23",totalprogress:"50", active:false},
+        { img: Achievement1,  title:"Old Boy",progressno:"23",totalprogress:"50", active:false},
+        { img: Achievement3,  title:"Old Boy",progressno:"23",totalprogress:"50", active:false},
+        { img: Achievement4,  title:"Old Boy",progressno:"23",totalprogress:"50", active:true},
+        { img: Achievement5,  title:"Old Boy",progressno:"23",totalprogress:"50", active:false},
+        { img: Achievement6,  title:"Old Boy",progressno:"23",totalprogress:"50", active:false},
+        { img: Achievement1,  title:"Old Boy",progressno:"23",totalprogress:"50", active:false},
     ]
 
     const TourGame=[

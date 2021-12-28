@@ -17,7 +17,8 @@
         position: relative;
         border: 1px solid transparent;
         @media screen and (max-width: $bigtablet){
-          padding: 12px 25px;
+          padding: 14px 20px;
+          font-size: 14px;
         }
         &:hover{
           border-color: var(--yellow);

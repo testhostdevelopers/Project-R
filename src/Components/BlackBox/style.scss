@@ -10,16 +10,31 @@
     align-items: center;
     flex-direction: column;
     width: 23.5%;
+    @media screen and (max-width: $tablet){
+        padding: 15px;
+    }
+    @media screen and (max-width: $mobile){
+        width: 48.5%;
+        margin-bottom: 10px;
+    }
+
     .box-img{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         margin-bottom: 32px;
+        @media screen and (max-width: $bigtablet){
+            margin-bottom: 15px;
+        }
         > img{
             max-height: 40px;
             max-width: 40px;
             margin:0 auto 12px auto;
+            @media screen and (max-width: $tablet){
+                max-height: 30px;
+                max-width: 30px;
+            }
         }
         span{
             font-style: normal;
@@ -30,6 +45,9 @@
             color: var(--white);
             text-align: center;
             display: block;
+            @media screen and (max-width: $tablet){
+                font-size: 12px;
+            }
         }
     }
     .price-number{
@@ -41,6 +59,15 @@
             color: var(--white);
             text-align: center;
             margin-bottom: 8px;
+            @media screen and (max-width: $bigtablet){
+                font-size: 22px;
+            }
+            @media screen and (max-width: $tablet){
+                font-size: 18px;
+            }
+            @media screen and (max-width: $mobile){
+                font-size: 16px;
+            }
         }
         span{
             font-style: normal;
@@ -50,6 +77,12 @@
             color: #606060;
             text-align: center;
             display: block;
+            @media screen and (max-width: $bigtablet){
+                font-size: 14px;
+            }
+            @media screen and (max-width: $tablet){
+                font-size: 12px;
+            }
         }
     }
 }
