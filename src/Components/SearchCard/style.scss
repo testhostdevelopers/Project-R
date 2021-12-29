@@ -76,6 +76,10 @@
                     font-size: 12px;
                     line-height: 100%;
                     color: var(--white);
+                    letter-spacing: 1px;
+                    @media screen and (max-width: $mobile){
+                        letter-spacing: 0px;
+                    }
                 }
             }
             .win-trophy{

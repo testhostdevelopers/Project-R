@@ -24,6 +24,10 @@
             @media screen and (max-width: $bigtablet){
                 padding-left: 25px;
                 padding-top: 20px;
+                @media screen and (max-width: $smtablet){
+                    padding-left: 10px;
+                    padding-top: 15px;
+                }
             }
             h4{
                 font-weight: 900;
@@ -32,8 +36,15 @@
                 color: var(--white);
                 text-transform: uppercase;
                 margin-bottom: 18px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
                 @media screen and (max-width: $bigtablet){
                     font-size: 28px;
+                }
+                @media screen and (max-width: $smtablet){
+                    font-size: 20px;
+                    margin-bottom: 10px;
                 }
             }
         }

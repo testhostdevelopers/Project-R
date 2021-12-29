@@ -40,12 +40,14 @@ export default function PlayerLeftBar({}) {
                     <p>Time management</p>
                 </div>
 
-                <div className="dark-box price">
-                    <h3>Money Bounty</h3>
-                    <p className='price'>$ 1,495.94</p>
-                </div>
+                
 
+                
 
+            </div>
+            
+           
+            <div className="box">
                 <div className="dark-box profile-name-img">
                     <span className="pimg">
                         <img src={pimg}/>
@@ -84,8 +86,14 @@ export default function PlayerLeftBar({}) {
                     </div>
                 </div>
             </div>
-
             
+            <div className="box">
+                <div className="price">
+                    <h3>Money Bounty</h3>
+                    <p className='price'>$ 1,495.94</p>
+                </div>
+            </div>
+
             <div className="score">
                 <h3>Social Score</h3>
                 <p className="s-no">102</p>

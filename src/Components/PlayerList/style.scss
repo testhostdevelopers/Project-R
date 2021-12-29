@@ -30,30 +30,27 @@
     .player-lavel-box {
         width: 100px;
         margin-right: 10px;
-        @media screen and (max-width: $tablet){
-            min-width: 60px;
-            max-width: 60px;
+        @media screen and (max-width: $bigtablet){
+            min-width: 75px;
+            max-width: 75px;
             width: auto;
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        @media screen and (max-width: $tablet){
+        @media screen and (max-width: $mobile){
             position: absolute;
             top: 10px;
             left: 10px;
-            min-width: 80px;
-            max-width: 80px;
+            min-width: 60px;
+            max-width: 60px;
         }
 
     }
 
     .player-name-box {
-        width: 15%;
+        width: 13%;
         margin-right: 10px;
         @media screen and (max-width: $tablet){
-            min-width: 60px;
-            max-width: 60px;
-            width: auto;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -68,9 +65,6 @@
         margin-right: 10px;
         width: 15%;
         @media screen and (max-width: $tablet){
-            min-width: 80px;
-            max-width: 80px;
-            width: auto;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -85,11 +79,9 @@
         margin-right: 10px;
         width: 12.7%;
         @media screen and (max-width: $tablet){
-            min-width: 50px;
-            max-width: 50px;
-            width: auto;
             overflow: hidden;
             text-overflow: ellipsis;
+            width:6%;
         }
         @media screen and (max-width: $mobile){
             min-width: 49%;
@@ -101,13 +93,16 @@
     .player-list-action{
         display: flex;
         align-items: center;
+        @media screen and (max-width: $tablet){
+            width: 30%;
+        }
         > a{
             margin-right: 10px;
             @media screen and (max-width: $tablet){
                 margin-right: 5px;
                 font-size: 10px;
                 white-space: nowrap;
-                padding: 9px 15px;
+                padding: 8px 10px;
                 @media screen and (max-width: $mobile){
                     margin-right: 0;
                     width: 47%;
@@ -137,6 +132,7 @@
         width: 14%;
         @media screen and (max-width: $tablet){
             margin-right: 15px;
+            width:112px;
         }
         @media screen and (max-width: $mobile){
             position: absolute;

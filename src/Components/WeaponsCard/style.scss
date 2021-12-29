@@ -20,6 +20,9 @@
             display: block;
             margin-bottom: auto;
             max-height: 100px;
+            @media screen and (max-width: $bigtablet){
+                max-height: 94px;
+            }
         }
         .weapon-info {
             width: 100%;

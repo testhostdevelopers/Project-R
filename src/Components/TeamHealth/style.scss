@@ -59,6 +59,9 @@
             @media screen and (max-width: $tablet){
                 width: 90px;
             }
+            @media screen and (max-width: $mobile){
+                align-items: flex-start;
+            }
             > img{
                 width: 32px;
                 height: 32px;
@@ -111,6 +114,10 @@
             @media screen and (max-width: $tablet){
                 width: calc(100% - 90px);
             }
+            @media screen and (max-width: $mobile){
+                align-items: flex-start;
+            }
+            
             li{
                 width: 33.33%;
                 display: flex;

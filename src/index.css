@@ -298,7 +298,7 @@ section {
 
 .btn-with-img > span{
 	line-height: 0;
-	margin-right: 8px;
+	margin-right: 6px;
 }
 
 .add-fav-btn{
@@ -329,29 +329,6 @@ section {
 	display: inline-block;
 	vertical-align: top;
 	padding-right: 8px;
-}
-
-.circle-arrow-btn{
-	background: #202020;
-	border-radius: 50px;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	border-radius: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	vertical-align: top;
-}
-
-.circle-arrow-btn img{
-	transition: all 0.5s ease 0s;
-	filter: brightness(0) invert(1);
-}
-
-.circle-arrow-btn:hover{
-	background-color: var(--yellow);
 }
 
 .dark-box{
@@ -445,14 +422,16 @@ section {
 	margin: 0 4px;
 	width: 40px;
 	height: 40px;
-	background-color: #303030 !important;
+	background-color: #202020 !important;
 	border-radius: 100% !important;
 	text-align: center;
 	line-height: 44px !important;
+	pointer-events: auto;
 }
 
 .owl-carousel.owl-theme .owl-nav button img{
 	transition: all 0.5s ease 0s;
+	filter: brightness(100);
 }
 
 .owl-carousel.owl-theme .owl-nav button:hover{
@@ -460,7 +439,7 @@ section {
 }
 
 .owl-carousel.owl-theme .owl-nav button:hover img{
-	filter: brightness(1) invert(1);
+	filter: brightness(100);
 }
 
 .slider-control-top .owl-nav {
@@ -477,7 +456,7 @@ section {
 
 .note {
 	position: relative;
-	padding: 40px 0 10px 0;
+	padding: 10px 0 15px 0;
 }
 .note h6{
 	font-family: Inter;
@@ -496,7 +475,7 @@ section {
 	color: #606060;
 }
 .sm-title h2 {
-	font-size: 16px;
+	font-size: 20px;
 }
 @media screen and (max-width: 1500px){
 	.container {

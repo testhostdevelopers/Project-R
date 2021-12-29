@@ -25,6 +25,7 @@
             }
             @media screen and (max-width: $mobile){
                 width: 100%;   
+                z-index: 0;
             }
             .filter-box-block{
                 margin: 0;
@@ -36,6 +37,7 @@
                         width: 100%;
                         overflow: auto;
                         scrollbar-width: none;
+                        height: 45px;
                         &::-webkit-scrollbar {
                             display: none;
                         }
@@ -317,6 +319,10 @@
     }
     .wallet-connect{
         margin-bottom: 30px;
+        label{
+            color: #fff;
+            line-height: 33px;
+        }
     }
     .action-btn{
         margin-top: 35px;

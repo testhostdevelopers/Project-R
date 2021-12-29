@@ -57,6 +57,7 @@
                 line-height: 100%;
                 padding-left: 25px;
                 line-height: 16px;
+                color: var(--white);
                 &:before {
                     top:0;
                     width: 16px;
@@ -64,6 +65,7 @@
                     background-repeat: no-repeat;
                     background-position: center center;
                     background-size: 8px;
+                    border-color: var(--white);
                 }
             }
             input[type="radio"]:checked + label::before{

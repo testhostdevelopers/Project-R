@@ -82,6 +82,11 @@
         overflow: auto; 
         overflow-x: hidden;
         padding: 35px;
+        @media screen and (max-width: $mobile){
+            max-width: 90%;
+            min-width: 90%;
+            padding: 20px;
+        }
     }
     .active-button {
         display: flex;

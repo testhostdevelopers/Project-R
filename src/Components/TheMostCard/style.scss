@@ -87,6 +87,9 @@
                 align-items: flex-end;
                 width: 100%;
                 margin-top: 25px;
+                .coinimg{
+                    margin-right: 10px;
+                }
                 @media screen and (max-width: $tablet){
                     .coinimg{
                         width: 15px;

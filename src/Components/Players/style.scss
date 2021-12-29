@@ -33,6 +33,10 @@
         }
         > a{
             margin-right: 10px;
+            @media screen and (max-width: $bigtablet){
+                padding: 10px 12px;
+                font-size: 12px;
+            }
             &:last-child{
                 margin-right: 0;
             }
@@ -53,6 +57,9 @@
 
     .player-overal-rating-box {
         margin-right: 15px;
+        @media screen and (max-width: $tablet){
+            margin-right: 10px;
+        }
         @media screen and (max-width: $mobile){
             position: absolute;
             bottom: 10px;
@@ -71,7 +78,6 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: space-between;
         @media screen and (max-width: $mobile){
             position: relative;
             padding-left: 100px;
@@ -91,13 +97,9 @@
             height: 70px;
             border-radius: 12px;
             position: relative;
-            @media screen and (max-width: $tablet){
-                width: 60px;
-                height: 60px;
-            }
-            @media screen and (max-width: $tablet){
-                width: 80px;
-                height: 80px;
+            @media screen and (max-width: $bigtablet){
+                width: 75px;
+                height: 75px;
             }
             .level-label-text{
                 background: linear-gradient(87.62deg, #3379E0 5.44%, #75ACFF 98.73%);

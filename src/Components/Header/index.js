@@ -39,7 +39,7 @@ export default function Header ({handleClick}) {
                                 </li>
                                 <li>
                                     <div className="profile-block">
-                                        <Link to="#0">
+                                        <Link to="Profile">
                                             <img src={ProfileIcon} alt={ProfileIcon} />
                                         </Link>
                                     </div>

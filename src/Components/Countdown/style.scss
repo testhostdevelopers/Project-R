@@ -85,8 +85,15 @@
         > div{
             position: relative;
             padding: 0 26px;
+            &:last-child{
+                .black-circle{
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
             @media screen and (max-width: $mobile){
-                padding: 0 4px;
+                padding: 0 8px;
             }
         }
         .black-circle{
@@ -101,15 +108,28 @@
             font-weight: bold;
             font-size: 56px;
             color: var(--white);
+            &:before{
+                content: ":";
+                position: absolute;
+                right: -4px;
+                top: 35%;
+                transform: translateY(-50%);
+                line-height: 45px;
+                @media screen and (max-width: $mobile){
+                    line-height: 35px;
+                    top: 30%;
+                    right: -3px;
+                }
+            }
             @media screen and (max-width: $bigtablet){
                 width: 100px;
                 height: 100px;
                 font-size: 42px;
             }
             @media screen and (max-width: $mobile){
-                width: 60px;
-                height: 60px;
-                font-size: 16px;
+                width: 45px;
+                height: 45px;
+                font-size: 15px;
             }
         }
         .label{

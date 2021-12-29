@@ -152,7 +152,7 @@ export default function PlayerMidBar({}) {
 
             <div className='Competitive'>
                 <div className='dark-box'>
-                    <h3>Competitive Overview</h3>
+                    <h3>Overview</h3>
                     <div className='act-drop'>
                         <FormSelect options={act} onClick={setACT} value={allACT} defaultValue="ACT2:E3"/>
                     </div>

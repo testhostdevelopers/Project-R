@@ -21,6 +21,9 @@
             margin-bottom: -20px;
             max-height: 185px;
             text-align: center;
+            @media screen and (max-width: $bigtablet){
+                width: 40%;
+            }
         }
         .Player-info {
             width: 55%;
@@ -29,6 +32,7 @@
             @media screen and (max-width: $bigtablet){
                 padding-left: 0;
                 padding-top: 0;
+                width: 60%;
             }
             h4{
                 font-weight: 900;
@@ -37,6 +41,9 @@
                 color: var(--white);
                 text-transform: uppercase;
                 margin-bottom: 12px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
                 @media screen and (max-width: $bigtablet){
                     font-size: 16px;
                 }
@@ -71,6 +78,9 @@
                     align-items: center;
                     font-weight: 600;
                     margin-bottom: 19px;
+                    @media screen and (max-width: $bigtablet){
+                        margin-bottom: 10px;
+                    }
                     img{
                         margin: 0 5px 0 0;
                     }
